@@ -44,4 +44,3 @@ def remove_echo(user_id, chat_id):
     if note:
         SESSION.delete(note)
         SESSION.commit()
-

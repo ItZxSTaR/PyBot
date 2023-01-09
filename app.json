@@ -81,19 +81,16 @@
             "required": false 
         },
         "HEROKU_APP_NAME": {
-            "description": "Your app name to Update your bot",
+          "description": "Your app name to Update your bot",
           "value": "",
           "required": false  
-        }
+        },
+        "MONGO_DB_URL": {
+          "description": "YOUR MONGO DATABASE URL HERE.",
+          "value": "",
+          "required": true
+        },
     },
-  "addons": [
-    {
-      "plan": "heroku-postgresql",
-      "options": {
-        "version": "12"
-      }
-    }
-  ],
   "buildpacks": [
         {
             "url": "heroku/python"

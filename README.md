@@ -5,7 +5,7 @@
 <p align="center"><a href="https://t.me/ItzExStar"><img src="https://te.legra.ph/file/07d39b85c6cea32f15259.jpg" width="400"></a></p>
 
 
-> ⭐️ Thanks to everyone for using THIS OP AltronX SPAM BOT, That is the greatest pleasure we have !
+> ⭐️ Thanks to everyone for using THIS OP PyBot, That is the greatest pleasure we have !
 
 <br>
 

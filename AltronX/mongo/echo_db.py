@@ -1,18 +1,5 @@
-from sqlalchemy import Column, String
-from AltronX.sql import BASE, SESSION
-
-
-class ECHOSQL(BASE):
-    __tablename__ = "echo_sql"
-    user_id = Column(String(14), primary_key=True)
-    chat_id = Column(String(14), primary_key=True)
-
-    def __init__(self, user_id, chat_id):
-        self.user_id = str(user_id)
-        self.chat_id = str(chat_id)
-
-
-ECHOSQL.__table__.create(checkfirst=True)
+import pymongo
+from AltronX.mongo import AltUser
 
 
 def is_echo(user_id, chat_id):

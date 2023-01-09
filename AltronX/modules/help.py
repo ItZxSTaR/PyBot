@@ -29,7 +29,7 @@ async def help(event):
             Button.inline("• ᴇxᴛʀᴀ •", data="extra"),
            ],
            [    
-            Button.url("• ᴄʜᴀɴɴᴇʟ •", "https://t.me/TheAltron"),
+            Button.url("• ᴜᴘᴅᴀᴛᴇꜱ •", "https://t.me/TheAltron"),
             Button.url("• sᴜᴘᴘᴏʀᴛ •", "https://t.me/AltronChats")
            ],
            ],
@@ -130,7 +130,7 @@ async def helpback(event):
             Button.inline("• ᴇxᴛʀᴀ •", data="extra"),
            ],
            [
-            Button.url("• ᴄʜᴀɴɴᴇʟ •", "https://t.me/TheAltron"),
+            Button.url("• ᴜᴘᴅᴀᴛᴇꜱ •", "https://t.me/TheAltron"),
             Button.url("• sᴜᴘᴘᴏʀᴛ •", "https://t.me/AltronChats")
            ],
            ],

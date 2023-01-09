@@ -42,10 +42,6 @@ if sudo:
     SUDO_USERS = make_int(sudo)
 
 OWNER_ID = int(os.environ.get("OWNER_ID", None))
-
-
-# Don't Mess with Codes !! 
-MONGO_URL = ""
 SUDO_USERS.append(OWNER_ID)
 
 # Token-Clients

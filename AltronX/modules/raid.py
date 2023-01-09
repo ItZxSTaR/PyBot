@@ -4,7 +4,7 @@ from telethon import events
 from config import MK1, MK2, MK3, MK4, MK5 , MK6, MK7, MK8, MK9, MK10, SUDO_USERS, OWNER_ID, CMD_HNDLR as hl
 from AltronX.data import RAID, REPLYRAID, ALTRON, MRAID, SRAID, CRAID, ALTRON
 
-que = {}
+que = []
 
 
 @MK1.on(events.NewMessage(incoming=True, pattern=r"\%sraid(?: |$)(.*)" % hl))
@@ -72,9 +72,7 @@ async def spam(e):
 @MK9.on(events.NewMessage(incoming=True))
 @MK10.on(events.NewMessage(incoming=True))
 async def _(event):
-    global que
-    queue = que.get(event.sender_id)
-    if not queue:
+    if event.sender_id in que:
         return
     await asyncio.sleep(0.3)
     await event.client.send_message(

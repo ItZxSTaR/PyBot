@@ -96,7 +96,7 @@ async def _(e):
     usage = f"𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲: 𝐑𝐞𝐩𝐥𝐲𝐑𝐚𝐢𝐝\n  » {hl}rraid <Username of User>\n  » {hl}rraid <reply to a User>"
     if e.sender_id in SUDO_USERS:
         mkrr = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
-        if len(e.text) > 11:
+        if len(e.text) > 7:
             message = str(mkrr[0])
             a = await e.client.get_entity(message)
             user_id = int(a.id)
@@ -107,7 +107,8 @@ async def _(e):
             elif int(user_id) in SUDO_USERS:
                 await e.reply("» ɴᴏ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴀ ꜱᴜᴅᴏ ᴜꜱᴇʀ", parse_mode=None, link_preview=None)
             else:
-                que.append(user_id)
+                if user_id not in que:
+                    que.append(user_id)
                 await e.reply("» ᴀᴄᴛɪᴠᴀᴛᴇᴅ ʀᴇᴘʟʏʀᴀɪᴅ !! ✅", parse_mode=None, link_preview=None)
 
         elif e.reply_to_msg_id:             
@@ -121,7 +122,8 @@ async def _(e):
             elif int(user_id) in SUDO_USERS:
                 await e.reply("» ɴᴏ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴀ ꜱᴜᴅᴏ ᴜꜱᴇʀ", parse_mode=None, link_preview=None)
             else:
-                que.append(user_id)
+                if user_id not in que:
+                    que.append(user_id)
                 await e.reply("» ᴀᴄᴛɪᴠᴀᴛᴇᴅ ʀᴇᴘʟʏʀᴀɪᴅ !! ✅", parse_mode=None, link_preview=None )
         else:
             await e.reply(usage)

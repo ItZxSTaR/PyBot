@@ -9,7 +9,7 @@ from AltronX.sql.echo_sql import addecho, is_echo, remove_echo
 from AltronX.data import ALTRON
 
 
-echoAlt = []
+echoAlt = {}
 
 @MK1.on(events.NewMessage(incoming=True, pattern=r"\%secho(?: |$)(.*)" % hl))
 @MK2.on(events.NewMessage(incoming=True, pattern=r"\%secho(?: |$)(.*)" % hl))

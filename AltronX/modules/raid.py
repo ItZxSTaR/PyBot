@@ -148,7 +148,7 @@ async def _(e):
             a = await e.client.get_entity(message)
             g = a.id
             try:
-                que.get(g)
+                que.remove(g)
             except Exception:
                 pass
             await e.reply("» ʀᴇᴘʟʏ ʀᴀɪᴅ ᴅᴇ-ᴀᴄᴛɪᴠᴀᴛᴇᴅ !! ✅", parse_mode=None, link_preview=None )
@@ -157,8 +157,7 @@ async def _(e):
             b = await e.client.get_entity(a.sender_id)
             g = b.id
             try:
-                queue = que.get(g)
-                queue.pop(0)
+                que.remove(g)
             except Exception:
                 pass
             await e.reply("» ʀᴇᴘʟʏ ʀᴀɪᴅ ᴅᴇ-ᴀᴄᴛɪᴠᴀᴛᴇᴅ !! ✅", parse_mode=None, link_preview=None )

@@ -107,10 +107,7 @@ async def _(e):
             elif int(user_id) in SUDO_USERS:
                 await e.reply("» ɴᴏ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴀ ꜱᴜᴅᴏ ᴜꜱᴇʀ", parse_mode=None, link_preview=None)
             else:
-                que[user_id] = []
-                gey = que.get(user_id)
-                phucker = [user_id]
-                gey.append(phucker)
+                que.append(user_id)
                 await e.reply("» ᴀᴄᴛɪᴠᴀᴛᴇᴅ ʀᴇᴘʟʏʀᴀɪᴅ !! ✅", parse_mode=None, link_preview=None)
 
         elif e.reply_to_msg_id:             
@@ -124,10 +121,7 @@ async def _(e):
             elif int(user_id) in SUDO_USERS:
                 await e.reply("» ɴᴏ, ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴀ ꜱᴜᴅᴏ ᴜꜱᴇʀ", parse_mode=None, link_preview=None)
             else:
-                que[user_id] = []
-                gey = que.get(user_id)
-                phucker = [user_id]
-                gey.append(phucker)
+                que.append(user_id)
                 await e.reply("» ᴀᴄᴛɪᴠᴀᴛᴇᴅ ʀᴇᴘʟʏʀᴀɪᴅ !! ✅", parse_mode=None, link_preview=None )
         else:
             await e.reply(usage)

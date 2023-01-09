@@ -22,6 +22,7 @@ echoAlt = {}
 @MK9.on(events.NewMessage(incoming=True, pattern=r"\%secho(?: |$)(.*)" % hl))
 @MK10.on(events.NewMessage(incoming=True, pattern=r"\%secho(?: |$)(.*)" % hl))
 async def echo(event):
+  global echoAlt
   usage = f"**ᴇᴄʜᴏ**:\n  » `{hl}echo <reply to a User>`"
   if event.sender_id in SUDO_USERS:
      if event.reply_to_msg_id is not None:
@@ -43,7 +44,7 @@ async def echo(event):
             if is_echo(user_id, chat_id):
                 await event.reply("» ᴇᴄʜᴏ ɪꜱ ᴀʟʀᴇᴀᴅʏ ᴀᴄᴛɪᴠᴀᴛᴇᴅ ᴏɴ ᴛʜɪꜱ ᴜꜱᴇʀ !!")
                 return
-            addecho(user_id, chat_id)
+            echoAlt[user_id] = chat_id
             await event.reply("» ᴇᴄʜᴏ ᴀᴄᴛɪᴠᴀᴛᴇᴅ ᴏɴ ᴛʜᴇ ᴜꜱᴇʀ ✅")
      else:
           await event.reply(usage)

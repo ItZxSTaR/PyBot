@@ -33,10 +33,10 @@ OWNER_ID = int(os.environ.get("OWNER_ID", None))
 
 
 # Don't Mess with Codes !! 
-DB_URI = config("DATABASE_URL", None)
+MONGO_URL = ""
 SUDO_USERS.append(OWNER_ID)
 
-# Tokens
+# Token-Clients
 MK1 = TelegramClient('MK', API_ID, API_HASH).start(bot_token=BOT_TOKEN)
 MK2 = TelegramClient('MK2', API_ID, API_HASH).start(bot_token=BOT_TOKEN2)
 MK3 = TelegramClient('MK3', API_ID, API_HASH).start(bot_token=BOT_TOKEN3)

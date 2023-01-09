@@ -73,13 +73,12 @@ async def spam(e):
 @MK10.on(events.NewMessage(incoming=True))
 async def _(event):
     if event.sender_id in que:
-        return
-    await asyncio.sleep(0.3)
-    await event.client.send_message(
-        entity=event.chat_id,
-        message="""{}""".format(random.choice(REPLYRAID)),
-        reply_to=event.message.id,
-    )
+        await asyncio.sleep(0.3)
+        await event.client.send_message(
+            entity=event.chat_id,
+            message="""{}""".format(random.choice(REPLYRAID)),
+            reply_to=event.message.id,
+        )
 
 
 @MK1.on(events.NewMessage(incoming=True, pattern=r"\%srraid(?: |$)(.*)" % hl))

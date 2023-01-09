@@ -41,6 +41,6 @@ async def logs(legend):
         logfile = open("PyBotLogs.txt", "w")
         logfile.write("⚡ TheAltron ⚡ [ PyBot Logs ]\n\n" + logs)
         logfile.close()
-        await MK1.send_file(legend.chat_id, "AltronLogs.txt", caption=f"⚡ 𝐏𝐲𝐁𝐨𝐭 𝐋𝐨𝐠𝐬 ⚡\n  » **ᴛɪᴍᴇ ᴛᴀᴋᴇɴ:** `{ms} ꜱᴇᴄᴏɴᴅꜱ`")
+        await MK1.send_file(legend.chat_id, "PyBotLogs.txt", caption=f"⚡ 𝐏𝐲𝐁𝐨𝐭 𝐋𝐨𝐠𝐬 ⚡\n  » **ᴛɪᴍᴇ ᴛᴀᴋᴇɴ:** `{ms} ꜱᴇᴄᴏɴᴅꜱ`")
     else:
         await legend.reply("» ꜱᴏʀʀʏ, ᴏɴʟʏ ᴏᴡɴᴇʀ ᴄᴀɴ ᴀᴄᴄᴇꜱꜱ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ.")

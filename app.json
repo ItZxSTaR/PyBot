@@ -85,11 +85,6 @@
           "value": "",
           "required": false  
         },
-        "MONGO_DB_URL": {
-          "description": "YOUR MONGO DATABASE URL HERE.",
-          "value": "",
-          "required": true
-        },
     },
   "buildpacks": [
         {

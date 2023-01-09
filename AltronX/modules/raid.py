@@ -143,13 +143,12 @@ async def _(e):
     if e.sender_id in SUDO_USERS:
         AltX = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
 
-        if len(e.text) > 12:
+        if len(e.text) > 8:
             message = str(AltX[0])
             a = await e.client.get_entity(message)
             g = a.id
             try:
-                queue = que.get(g)
-                queue.pop(0)
+                que.get(g)
             except Exception:
                 pass
             await e.reply("» ʀᴇᴘʟʏ ʀᴀɪᴅ ᴅᴇ-ᴀᴄᴛɪᴠᴀᴛᴇᴅ !! ✅", parse_mode=None, link_preview=None )

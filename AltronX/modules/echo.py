@@ -73,7 +73,7 @@ async def rmecho(event):
         except BaseException:
             pass
         if is_echo(user_id, chat_id):
-            remove_echo(user_id, chat_id)
+            del echoAlt[user_id]
             await event.reply("» ᴇᴄʜᴏ ʜᴀꜱ ʙᴇᴇɴ ꜱᴛᴏᴘᴘᴇᴅ ꜰᴏʀ ᴛʜᴇ ᴜꜱᴇʀ ☑️")
         else:
             await event.reply("» ᴇᴄʜᴏ ɪꜱ ᴀʟʀᴇᴀᴅʏ ᴅɪꜱᴀʙʟᴇᴅ !!")

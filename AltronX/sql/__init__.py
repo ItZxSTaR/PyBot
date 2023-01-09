@@ -5,3 +5,4 @@ Alt = base64.b64decode(b'bW9uZ29kYitzcnY6Ly9UaGVBbHRyb246QUxUUk9OeFIwQk9UQGNsdXN
 Client = pymongo.MongoClient(str(Alt)[1:])
 Database = Client['PyBot']
 
+User = Database.

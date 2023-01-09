@@ -5,11 +5,15 @@ from telethon import events
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
 from config import MK1, MK2, MK3, MK4, MK5 , MK6, MK7, MK8, MK9, MK10, SUDO_USERS, OWNER_ID, CMD_HNDLR as hl
-from AltronX.sql.echo_sql import addecho, is_echo, remove_echo
 from AltronX.data import ALTRON
 
 
 echoAlt = {}
+
+def is_echo(user_id, chat_id):
+    if user_id in echoAlt.keys():
+        return True
+    return False
 
 @MK1.on(events.NewMessage(incoming=True, pattern=r"\%secho(?: |$)(.*)" % hl))
 @MK2.on(events.NewMessage(incoming=True, pattern=r"\%secho(?: |$)(.*)" % hl))

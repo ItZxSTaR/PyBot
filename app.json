@@ -8,7 +8,7 @@
         "PythonX",
         "SpamBots"
     ],
-    "repository": "https://github.com/ItZxSTaR/TheBotSpam",
+    "repository": "https://github.com/ItZxSTaR/PyBot",
     "env": {
      "CMD_HNDLR": {
             "description": "Custom command handler.",
